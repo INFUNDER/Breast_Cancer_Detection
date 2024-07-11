@@ -1,10 +1,20 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template ('index.html')
+def home():
+    return render_template('index.html')
 
-if __name__ == "__main__":
+@app.route('/Breast Cancer')
+def BreastCancer():
+    return render_template('BreastCancer.html')
+
+@app.route('/Covid')
+def Covid19():
+    return render_template('Covid19.html')
+
+
+if __name__ == '__main__':
     app.run(debug=True)
+

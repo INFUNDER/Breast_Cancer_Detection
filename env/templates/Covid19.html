@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}"> 
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('home') }}">Disease Prediction</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('BreastCancer') }}">Breast Cancer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('Covid19') }}">Covid-19</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container mt-5">
+            <h1>Predicting Breast Cancer</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="Age" class="form-label">Age:</label>
+                    <input type="text" class="form-control" id="Age" name="Age">
+                </div>
+                <div class="mb-3">
+                    <label for="bodytemperature" class="form-label">Body Temperature:</label>
+                    <input type="text" class="form-control" id="bodytemperature" name="bodytemperature">
+                </div>
+                <div class="mb-3">
+                    <label for="DryCough" class="form-label">Dry Cough:</label>
+                    <input type="text" class="form-control" id="DryCough" name="DryCough">
+                </div>
+                <div class="mb-3">
+                    <label for="sourthroat" class="form-label">Sour Throat:</label>
+                    <input type="text" class="form-control" id="sourthroat" name="sourthroat">
+                </div>
+                <div class="mb-3">
+                    <label for="Weakness" class="form-label">Weakness:</label>
+                    <input type="text" class="form-control" id="Weakness" name="Weakness">
+                </div>
+                <div class="mb-3">
+                    <label for="breathingproblem" class="form-label">Breathing Problem:</label>
+                    <input type="text" class="form-control" id="breathingproblem" name="breathingproblem">
+                </div>
+                <div class="mb-3">
+                    <label for="drowsiness" class="form-label">Drowsiness:</label>
+                    <input type="text" class="form-control" id="drowsiness" name="drowsiness">
+                </div>
+                <div class="mb-3">
+                    <label for="paininchest " class="form-label">Pain In Chest:</label>
+                    <input type="text" class="form-control" id="paininchest" name="paininchest">
+                </div>
+                <div class="mb-3">
+                    <label for="travelhistorytoinfectedcountries " class="form-label">Travel History To Infected Countries:</label>
+                    <input type="text" class="form-control" id="travelhistorytoinfectedcountries" name="travelhistorytoinfectedcountries">
+                </div>
+                <div class="mb-3">
+                    <label for="strokeorreducedimmunity " class="form-label">Stroke Or Reduced Immunity:</label>
+                    <input type="text" class="form-control" id="strokeorreducedimmunity" name="strokeorreducedimmunity">
+                </div>
+                <div class="mb-3">
+                    <label for="highbloodpressue " class="form-label">High Blood Pressue:</label>
+                    <input type="text" class="form-control" id="highbloodpressue" name="highbloodpressue">
+                </div>
+                <div class="mb-3">
+                    <label for="changeinappetide " class="form-label">Change In Appetide:</label>
+                    <input type="text" class="form-control" id="changeinappetide" name="changeinappetide">
+                </div>
+                <div class="mb-3">
+                    <label for="Lossofsenseofsmell " class="form-label">Loss Of Sense Of Smell:</label>
+                    <input type="text" class="form-control" id="Lossofsenseofsmell" name="Lossofsenseofsmell">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYQ4EN2u5pupyn7EkKtLkpE04IlW/+OHI5O/ndbKFm0Rb/ks0xN0BO+" crossorigin="anonymous"></script>
+    </body>
+</html>
