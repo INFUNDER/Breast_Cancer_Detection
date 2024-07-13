@@ -36,7 +36,7 @@
         <!-- Main Content -->
         <div class="container mt-5">
             <h1>Predicting Breast Cancer</h1>
-            <form>
+            <form method="POST">
                 <div class="mb-3">
                     <label for="ClumpThickness" class="form-label">Clump Thickness:</label>
                     <input type="text" class="form-control" id="ClumpThickness" name="ClumpThickness">
@@ -71,8 +71,10 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div class="prediction">
+                Results: {{predict}}
+            </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYQ4EN2u5pupyn7EkKtLkpE04IlW/+OHI5O/ndbKFm0Rb/ks0xN0BO+" crossorigin="anonymous"></script>
     </body>
 </html>
