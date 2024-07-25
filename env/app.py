@@ -26,8 +26,12 @@ names = [
 ]
 b_car = pd.read_csv(url, names=names)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route('/')
 def home():
+    return render_template('home.html')
+
+@app.route('/diabetes', methods=["GET", "POST"])
+def Diabetes():
     if request.method == "POST":
         Pregnancies = request.form["pregnancies"]
         glucose = request.form["glucose"]
@@ -58,9 +62,9 @@ def home():
         else:
             predict = "Negative"
         # Process the text_value (e.g., store in database, perform calculations)
-        return render_template("index.html", predict=predict)
+        return render_template("Diabetes.html", predict=predict)
     else:
-        return render_template("index.html")
+        return render_template("Diabetes.html")
 
 @app.route("/BreastCancer", methods=["GET", "POST"])
 def BreastCancer():
